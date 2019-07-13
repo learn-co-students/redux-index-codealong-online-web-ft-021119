@@ -6,13 +6,17 @@ class CreateTodo extends Component {
   constructor() {
     super();
     this.state = {
-      text: '',
+      text: ''
     };
   }
 
   handleSubmit = event => {
     event.preventDefault();
     this.props.addTodo(this.state)
+    debugger
+    this.setState({
+      text: ''
+    })
   }
 
   handleChange(event) {
